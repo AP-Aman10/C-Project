@@ -1,20 +1,24 @@
 #include <stdio.h>
-    int sum(int, int);
-    int sum(int x, int y){
-        return x+y;
+#include <math.h>
+
+void calculator(int, int);
+void calculator(int x, int y) {
+    printf("\n");
+    printf("Addition: %d + %d = %d\n", x, y, x + y);
+    printf("Subtraction: %d - %d = %d\n", x, y, x - y);
+    printf("Division: %d / %d = %.2f\n", x, y, (float)x / y);
+    printf("Multiplication: %d * %d = %d\n", x, y, x * y);
+    printf("Modular: %d %% %d = %d\n", x, y, x % y);
+    printf("Exponentiation: %d ^ %d = %.0f\n", x, y, pow(x, y));
 }
-int main(){
-    int a = 1;
-    int b = 2;
-    int c  = sum(a,b);
-    printf("%d\n", c);
-    int a1 = 12;
-    int b1 = 23;
-    int c1 = sum(a1,b1);
-    printf("%d\n", c1);
-    int a2 = 2;
-    int b2 = 27;
-    int c3 = sum(a2, b2);
-    printf("%d\n", c3); 
+
+int main() {
+    int num1, num2;
+    printf("Enter the Num1: ");
+    scanf("%d", &num1);
+    printf("Enter the Num2: ");
+    scanf("%d", &num2);
+
+    calculator(num1, num2);
     return 0;
 }
