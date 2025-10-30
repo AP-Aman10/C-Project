@@ -1,12 +1,14 @@
 #include <stdio.h>
-    int change(int a);
-    int change(int a) {
-        a = 77; // Misnomer
-         return 0;
+
+int change(int a) {
+    a = 77;
+    printf("Inside change(): a = %d\n", a);
+    return a;
 }
-int main(){
-    int b=22;
-    change(b); // The value of b remains 22
-    printf("b is %d", b); 
+
+int main() {
+    int b = 22;
+    b = change(b);
+    printf("b is %d\n", b);
     return 0;
 }
